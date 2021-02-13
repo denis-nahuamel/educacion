@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "educacion-c0287": {
+      "hosting": {
+        "educacion": [
+          "educacion-c0287"
+        ]
+      }
+    }
+  }
+}
