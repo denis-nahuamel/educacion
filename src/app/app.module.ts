@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DocentesComponent } from './docentes/docentes.component';
 import { CursoComponent } from './curso/curso.component';
+import { AgregarDocenteComponent } from './docentes/agregar-docente/agregar-docente.component';
 const firebase = {
     apiKey: "AIzaSyDhGhYs_RGhWmFRjZP3jti-ZLmgO6JSxEw",
     authDomain: "pabloapostolcusco.firebaseapp.com",
@@ -25,7 +26,8 @@ const firebase = {
     EstudianteComponent,
     HomeComponent,
     DocentesComponent,
-    CursoComponent
+    CursoComponent,
+    AgregarDocenteComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ const firebase = {
      AngularFireModule.initializeApp(firebase),
      RouterModule.forRoot([
       {path: '', component: EstudianteComponent, pathMatch: 'full' },
-     {path: 'docentes', component: DocentesComponent }
+     {path: 'docentes', component: DocentesComponent },
+     {path: 'docentes/agregar', component: AgregarDocenteComponent }
     ])
   ],
   providers: [],

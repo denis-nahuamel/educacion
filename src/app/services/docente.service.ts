@@ -9,14 +9,16 @@ import { map } from 'rxjs/operators';
 export class DocenteService {
   private DocentesCollection: AngularFirestoreCollection<DocenteInterface>;
   private Docentes: Observable<DocenteInterface[]>;
+   //public Docente: Observable<DocenteInterface>;
  /* private DocenteDoc: AngularFirestoreDocument<DocenteInterface>;
   private Docente: Observable<DocenteInterface>;
   public selectedDocente: DocenteInterface = {
     id: null
   };*/
  constructor(private afs: AngularFirestore) {
-    this.DocentesCollection = afs.collection<DocenteInterface>('docentes');
+    this.DocentesCollection = this.afs.collection<DocenteInterface>('docentes');
     this.Docentes = this.DocentesCollection.valueChanges();
+
 
   }
   getDocentes() {
@@ -30,4 +32,15 @@ export class DocenteService {
         });
       }));
   }
+   agregarDocente(docente: DocenteInterface): void {
+    const postObj = {
+      apellidoMaterno: docente.apellidoMaterno,
+      apellidoPaterno: docente.apellidoPaterno,
+      celular: docente.celular,
+      dni: docente.dni,
+      nombres: docente.nombres
+    };
+    this.DocentesCollection.add(postObj);
+  }
+
 }
