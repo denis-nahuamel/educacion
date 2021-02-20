@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { DocentesComponent } from './docentes/docentes.component';
 import { CursoComponent } from './curso/curso.component';
 import { AgregarDocenteComponent } from './docentes/agregar-docente/agregar-docente.component';
+import { AgregarEstudianteComponent } from './estudiante/agregar-estudiante/agregar-estudiante.component';
+import { AgregarCursoComponent } from './curso/agregar-curso/agregar-curso.component';
 const firebase = {
      apiKey: "AIzaSyB3bmXYohaGFRLxc0_uHQHzbe_B13k9FnI",
     authDomain: "educacion-c0287.firebaseapp.com",
@@ -26,7 +28,9 @@ const firebase = {
     HomeComponent,
     DocentesComponent,
     CursoComponent,
-    AgregarDocenteComponent
+    AgregarDocenteComponent,
+    AgregarEstudianteComponent,
+    AgregarCursoComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ const firebase = {
      RouterModule.forRoot([
       {path: '', component: EstudianteComponent, pathMatch: 'full' },
      {path: 'docentes', component: DocentesComponent },
-     {path: 'docentes/agregar', component: AgregarDocenteComponent }
+     {path: 'docentes/agregar', component: AgregarDocenteComponent },
+     {path: 'estudiantes', component: EstudianteComponent },
+     {path: 'estudiantes/agregar', component: AgregarEstudianteComponent }
     ])
   ],
   providers: [],

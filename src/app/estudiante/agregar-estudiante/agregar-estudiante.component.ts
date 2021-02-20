@@ -5,18 +5,18 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs/internal/Observable';
 import { finalize } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DocenteService } from 'src/app/services/docente.service';
-import { DocenteInterface } from 'src/app/models/docente';
+import { EstudianteService } from 'src/app/services/estudiante.service';
+import { EstudianteInterface } from 'src/app/models/estudiante';
 
 @Component({
-  selector: 'app-agregar-docente',
-  templateUrl: './agregar-docente.component.html',
-  styleUrls: ['./agregar-docente.component.css']
+  selector: 'app-agregar-estudiante',
+  templateUrl: './agregar-estudiante.component.html',
+  styleUrls: ['./agregar-estudiante.component.css']
 })
-export class AgregarDocenteComponent implements OnInit {
+export class AgregarEstudianteComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
-  	private firestore: AngularFirestore,public docenteService: DocenteService,
+  	private firestore: AngularFirestore,public estudianteService: EstudianteService,
      private storage: AngularFireStorage,private router: Router,
     ) {
   }
@@ -37,21 +37,22 @@ export class AgregarDocenteComponent implements OnInit {
      dni: new FormControl('')
 
   });
-  message: string = "Docente Agregado."
+  message: string = "Estudiante Agregado."
   @Output() messageEvent = new EventEmitter<string>();
 
 ngOnInit() {
 
-      //this.titulo="Agregar Docente";
+      //this.titulo="Agregar Estudiante";
       this.btnTexto="Agregar";
 
 }
-  agregarDocente(data: DocenteInterface) {
-        this.docenteService.agregarDocente(data);
+  agregarEstudiante(data: EstudianteInterface) {
+        this.estudianteService.agregarEstudiante(data);
         this.irAtras();
   }
   irAtras(){
-        this.router.navigate(['docentes']);
+        this.router.navigate(['estudiantes']);
   }
 
 }
+

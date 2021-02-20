@@ -9,12 +9,7 @@ import { map } from 'rxjs/operators';
 export class DocenteService {
   private DocentesCollection: AngularFirestoreCollection<DocenteInterface>;
   private Docentes: Observable<DocenteInterface[]>;
-   //public Docente: Observable<DocenteInterface>;
- /* private DocenteDoc: AngularFirestoreDocument<DocenteInterface>;
-  private Docente: Observable<DocenteInterface>;
-  public selectedDocente: DocenteInterface = {
-    id: null
-  };*/
+
  constructor(private afs: AngularFirestore) {
     this.DocentesCollection = this.afs.collection<DocenteInterface>('docentes');
     this.Docentes = this.DocentesCollection.valueChanges();
