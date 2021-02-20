@@ -48,7 +48,7 @@ ngOnInit() {
 }
   agregarDocente(data: DocenteInterface) {
         this.docenteService.agregarDocente(data);
-        this.irAtras();
+        //this.irAtras();
   }
   irAtras(){
         this.router.navigate(['docentes']);

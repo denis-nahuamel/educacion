@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EstudianteComponent } from './estudiante/estudiante.component';
@@ -11,14 +11,13 @@ import { DocentesComponent } from './docentes/docentes.component';
 import { CursoComponent } from './curso/curso.component';
 import { AgregarDocenteComponent } from './docentes/agregar-docente/agregar-docente.component';
 const firebase = {
-    apiKey: "AIzaSyDhGhYs_RGhWmFRjZP3jti-ZLmgO6JSxEw",
-    authDomain: "pabloapostolcusco.firebaseapp.com",
-    databaseURL: "https://pabloapostolcusco.firebaseio.com",
-    projectId: "pabloapostolcusco",
-    storageBucket: "pabloapostolcusco.appspot.com",
-    messagingSenderId: "427970761136",
-    appId: "1:427970761136:web:b2bff305d36ba6d3258675",
-    measurementId: "G-JJQN56PFN9"
+     apiKey: "AIzaSyB3bmXYohaGFRLxc0_uHQHzbe_B13k9FnI",
+    authDomain: "educacion-c0287.firebaseapp.com",
+    projectId: "educacion-c0287",
+    storageBucket: "educacion-c0287.appspot.com",
+    messagingSenderId: "1003371016732",
+    appId: "1:1003371016732:web:146c38caad1eadc8dc65d9",
+    measurementId: "G-NNNCSYDDZQ"
   };
 @NgModule({
   declarations: [
@@ -31,6 +30,8 @@ const firebase = {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule ,
     AppRoutingModule,
      AngularFireModule.initializeApp(firebase),
      RouterModule.forRoot([

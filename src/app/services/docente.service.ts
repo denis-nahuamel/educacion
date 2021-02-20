@@ -33,6 +33,7 @@ export class DocenteService {
       }));
   }
    agregarDocente(docente: DocenteInterface): void {
+     console.log(docente,"aquiii");
     const postObj = {
       apellidoMaterno: docente.apellidoMaterno,
       apellidoPaterno: docente.apellidoPaterno,
