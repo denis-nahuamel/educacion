@@ -43,7 +43,9 @@ const firebase = {
      {path: 'docentes', component: DocentesComponent },
      {path: 'docentes/agregar', component: AgregarDocenteComponent },
      {path: 'estudiantes', component: EstudianteComponent },
-     {path: 'estudiantes/agregar', component: AgregarEstudianteComponent }
+     {path: 'estudiantes/agregar', component: AgregarEstudianteComponent },
+     {path: 'cursos', component: CursoComponent },
+     {path: 'cursos/agregar', component: AgregarCursoComponent }
     ])
   ],
   providers: [],

@@ -29,12 +29,14 @@ private EstudiantesCollection: AngularFirestoreCollection<EstudianteInterface>;
   }
    agregarEstudiante(estudiante: EstudianteInterface): void {
      console.log(estudiante,"aquiii");
+
     const postObj = {
       apellidoMaterno: estudiante.apellidoMaterno,
       apellidoPaterno: estudiante.apellidoPaterno,
       celular: estudiante.celular,
       dni: estudiante.dni,
-      nombres: estudiante.nombres
+      nombres: estudiante.nombres,
+      cursos:estudiante.cursos
     };
     this.EstudiantesCollection.add(postObj);
   }

@@ -1,1 +1,28 @@
-<p>curso works!</p>
+<div class="container" >
+
+    <div class="row"style="margin: 20px;">
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Cursos agregados</h5>
+           <div class="card-body">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Nombre del Curso</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let curso of cursosList">
+                  <th scope="row">{{curso.nombre}}</th>
+
+                </tr>
+
+              </tbody>
+            </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
