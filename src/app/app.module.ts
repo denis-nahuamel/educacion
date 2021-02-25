@@ -12,6 +12,8 @@ import { CursoComponent } from './curso/curso.component';
 import { AgregarDocenteComponent } from './docentes/agregar-docente/agregar-docente.component';
 import { AgregarEstudianteComponent } from './estudiante/agregar-estudiante/agregar-estudiante.component';
 import { AgregarCursoComponent } from './curso/agregar-curso/agregar-curso.component';
+import { MatriculaComponent } from './matricula/matricula/matricula.component';
+import { GenerarMatriculaComponent } from './matricula/generar-matricula/generar-matricula.component';
 const firebase = {
      apiKey: "AIzaSyB3bmXYohaGFRLxc0_uHQHzbe_B13k9FnI",
     authDomain: "educacion-c0287.firebaseapp.com",
@@ -30,7 +32,9 @@ const firebase = {
     CursoComponent,
     AgregarDocenteComponent,
     AgregarEstudianteComponent,
-    AgregarCursoComponent
+    AgregarCursoComponent,
+    MatriculaComponent,
+    GenerarMatriculaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<div class="container" >
+    <div class="row"style="margin: 20px;">
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Agregar Matricula</h5>
+           <div class="card-body">
+   <form class="quform" [formGroup]="newPostForm" (ngSubmit)="agregarMatricula(newPostForm.value)">
+   <div class="quform-elements">
+
+
+      <!-- Contenido -->
+      <div class="form-group row">
+         <label class="col-md-3 col-form-label" for="text-input">Nombre del curso</label>
+         <div class="col-md-9">
+            <input type="text"  formControlName="nombre" class="form-control" placeholder="nombre">
+            <span class="help-block">*requerido</span>
+         </div>
+      </div>
+
+
+      <!-- Begin Submit button -->
+      <div class="quform-submit">
+         <div class="quform-submit-inner">
+            <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!newPostForm.valid"><span>{{btnTexto}}</span></button>
+         </div>
+         <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+      </div>
+   </div>
+   </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
