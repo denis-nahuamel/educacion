@@ -6,15 +6,34 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#">Educacion</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/docentes']">Docentes</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Docentes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/docentes']">Listar Docentes</a>
+          <a class="dropdown-item"[routerLink]="['/docentes/agregar']">Agregar Docente</a>
+        </div>
       </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Estudiantes</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Estudiantes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/estudiantes']">Listar Estudiantes</a>
+          <a class="dropdown-item"[routerLink]="['/estudiantes/agregar']">Agregar Estudiante</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cursos</a>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/cursos']">Listar Cursos</a>
+          <a class="dropdown-item" [routerLink]="['/cursos/agregar']">Agregar Curso</a>
+        </div>
       </li>
+
 
     </ul>
 
