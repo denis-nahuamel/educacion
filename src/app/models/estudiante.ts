@@ -1,3 +1,4 @@
+import { CursoInterface} from './curso';
 export interface EstudianteInterface {
   id?: string;
   apellidoMaterno?: string;
@@ -5,9 +6,7 @@ export interface EstudianteInterface {
   celular?: string;
   dni?: string;
   nombres?: string;
-   cursos: Cursos;
-}
-export interface Cursos {
-  curso?: boolean;
+  // cursos: CursoInterface;
+  curso?: string;
 }
 

@@ -17,7 +17,7 @@ import { CursoInterface } from 'src/app/models/curso';
 export class AgregarEstudianteComponent implements OnInit {
 public cursosList:CursoInterface[];
 verSeleccion: string        = '';
-opcionSeleccionado: string  = '0';
+opcionSeleccionado: string  = 'nuemro';
   constructor(private activatedRoute: ActivatedRoute,
   	private firestore: AngularFirestore,public cursoService: CursoService,public estudianteService: EstudianteService,
      private storage: AngularFireStorage,private router: Router,
@@ -38,8 +38,8 @@ opcionSeleccionado: string  = '0';
     apellidoPaterno: new FormControl('', Validators.required),
     apellidoMaterno: new FormControl(''),
      celular: new FormControl(''),
-     dni: new FormControl('')
-
+     dni: new FormControl(''),
+    curso:new FormControl('')
   });
   message: string = "Estudiante Agregado."
   @Output() messageEvent = new EventEmitter<string>();
@@ -52,6 +52,7 @@ ngOnInit() {
 
 }
   agregarEstudiante(data: EstudianteInterface) {
+        //data.cursos=this.cursosList.find( fruta => fruta.nombre === this.verSeleccion) as CursoInterface;
         this.estudianteService.agregarEstudiante(data);
         this.irAtras();
   }
@@ -66,6 +67,8 @@ ngOnInit() {
  capturar() {
       // Pasamos el valor seleccionado a la variable verSeleccion
       this.verSeleccion = this.opcionSeleccionado;
+
+      console.log("quiero veer",this.verSeleccion);
   }
   irAtras(){
         this.router.navigate(['estudiantes']);

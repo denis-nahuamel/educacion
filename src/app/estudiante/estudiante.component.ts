@@ -18,12 +18,14 @@ public estudiantesList:EstudianteInterface[];
   }
 
   ngOnInit(): void {
+    this.estudiantesList=[];
     this.Cursos();
   }
   Cursos(){
 this.estudiantesList=[];
  	this.estudianteApi.getEstudiantes().subscribe(estudiantes => {
  		for (let estudiante of estudiantes){
+       console.log(estudiante);
         		this.estudiantesList.push(estudiante);
  		}
  	});

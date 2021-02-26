@@ -12,14 +12,16 @@
                   <th scope="col">Apellido Paterno</th>
                   <th scope="col">Apellido Materno</th>
                   <th scope="col">DNI</th>
+                  <th scope="col">Curso</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let estudiante of estudiantesList">
-                  <th scope="row">{{estudiante.nombres}}</th>
+                  <th>{{estudiante.nombres}}</th>
                   <td>{{estudiante.apellidoPaterno}}</td>
                   <td>{{estudiante.apellidoMaterno}}</td>
                   <td>{{estudiante.dni}}</td>
+                  <td>{{estudiante.curso}}</td>
                 </tr>
 
               </tbody>

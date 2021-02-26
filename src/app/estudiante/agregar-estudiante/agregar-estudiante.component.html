@@ -44,24 +44,24 @@
 
          </div>
       </div>
-      <div class="form-group">
+
+<div class="form-group">
          <label class="col-md-3 col-form-label" for="text-input">Curso</label>
           <div class="col-md-6">
-            <select [(ngModel)]="opcionSeleccionado" (change)="capturar()"  class="form-select" aria-label="Default select example">
-                <option value="0">Selecciona una opción</option>
-                <option *ngFor="let curso of cursosList">
+            <select formControlName="curso" (change)="capturar()"
+             class="form-select" aria-label="Default select example">
+                <option value="curso">Selecciona una opción</option>
+                <option [value]="curso.nombre" *ngFor="let curso of cursosList">
                   {{curso.nombre}}
                 </option>
             </select>
           </div>
       </div><br>
-      <!-- Begin Submit button -->
-     <!-- <div class="form-group">
-         <div class="col-lg-offset-2 col-lg-10">-->
             <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!newPostForm.valid"><span>{{btnTexto}}</span></button>
 
 
    </form>
+
 </div>
 </div>
 </div>
